@@ -1,3 +1,3 @@
-export const USER_RELATION = {
+export const PLAYER_RELATION = {
   USER: 'user',
 } as const;

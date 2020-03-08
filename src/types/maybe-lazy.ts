@@ -1,0 +1,1 @@
+export type MaybeLazy<T> = T | Promise<T>;
