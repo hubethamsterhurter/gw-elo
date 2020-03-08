@@ -1,0 +1,11 @@
+version: "3.4"
+services:
+  gw_elo_db2:
+    container_name: gw_elo_db_container2
+    image: postgres:9.6.17-alpine
+    ports:
+      - ${DB_PORT}:5432
+    environment: 
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_DB: ${DB_DATABASE}

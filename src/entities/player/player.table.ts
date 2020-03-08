@@ -1,0 +1,1 @@
+export const PLAYER_TABLE = 'players' as const;
