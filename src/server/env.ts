@@ -27,6 +27,7 @@ function envNum(name: string): number {
 export const env = {
   NODE_ENV: envStr('NODE_ENV'),
   isDev: envStr('NODE_ENV').toLowerCase() === 'development',
+  isProd: envStr('NODE_ENV').toLowerCase() === 'production',
 
   PORT: envNum('PORT'),
   DB_PASSWORD: envStr('DB_PASSWORD'),

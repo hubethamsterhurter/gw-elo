@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Guild Warsa Elo System" />
+	<meta name="author" content="Hubet Hamsterhurter" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+  <title>Guild Wars ELO System</title>
+  <style>
+    :root {
+      --universal-margin: 0.1em;
+    }
+
+    body {
+      background-color: #0e0e0e;
+      color: white;
+      display: grid;
+      grid-gap: 10px;
+      grid-template-areas: 
+        "summary-controls       main-controls       main-controls       main-controls       main-controls       main-controls       online-players"
+        "top-players            chat                chat                chat                chat                chat                profile"
+      ;
+    }
+
+    .primary-element {
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: var(--universal-margin);
+      border-radius: 0.5em;
+      display: flex;
+      flex-direction: column;
+      /* justify-content: center; */
+      /* align-items: center; */
+    }
+
+    .summary-controls {
+      grid-area: summary-controls;
+    }
+    .top-players {
+      grid-area: top-players;
+    }
+    .main-controls {
+      grid-area: main-controls;
+    }
+    .online-players {
+      grid-area: online-players;
+    }
+    .chat {
+      grid-area: chat;
+    }
+    .profile {
+      grid-area: profile;
+    }
+    .create-message {
+      margin: 0 1em 0 1em;
+      width: calc(100% - 2em);
+    }
+
+    .chat-history {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(10ch, 1fr));
+      grid-gap: 0.1em;
+    }
+
+    .chat-history dd {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+
+    .chat-history dt {
+      grid-column: span 4;
+      word-wrap: normal;
+    }
+
+    /* aside {
+      grid-area: aside;
+    }
+    main {
+      grid-area: main;
+      min-height: 50vmin;
+    }
+    footer {
+      grid-area: footer;
+      display: flex;
+      justify-content: space-around;
+      min-height: 10vmin;
+    } */
+
+  </style>
+</head>
+<body>
+  <section class="primary-element summary-controls"> summary controls </section>
+  <section class="primary-element top-players"> top players </section>
+  <section class="primary-element main-controls"> main control section </section>
+  <section class="primary-element online-players">online players </section>
+  <section class="primary-element chat">
+    <dl class="chat-history">
+      <dd><strong>Hubet:</strong></dd><dt> Hello :)</dt>
+      <dd><strong>Hubet:</strong></dd><dt>Hello :)</dt>
+      <dd><strong>Hubet:</strong></dd><dt>Hello :)</dt>
+      <dd><strong>Hubet:</strong></dd><dt>Hello :)</dt>
+    </dl>
+    <div>
+      <label for="create-message">chat:</label>
+      <input id="create-message" class="create-message" type="text" />
+    </div>
+  </section>
+  <section class="primary-element profile">profile</section>
+</body>
+</html>

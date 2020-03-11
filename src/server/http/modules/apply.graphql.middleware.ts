@@ -2,7 +2,7 @@ import express from 'express';
 import { ApolloServer } from 'apollo-server-express';
 import { buildSchema } from 'type-graphql';
 import Container from 'typedi';
-import { UserResolver } from '../entities/user/user.resolver';
+import { UserResolver } from '../../entities/user/user.resolver';
 
 
 /**
@@ -11,7 +11,9 @@ import { UserResolver } from '../entities/user/user.resolver';
  * 
  * @param expressApp 
  */
-export async function applyGraphqlMiddleware(expressApp: express.Express) {
+export async function applyGraphqlMiddleware(
+  expressApp: express.Express
+): Promise<void> {
   const schema = await buildSchema({
     container: Container,
     resolvers: [
