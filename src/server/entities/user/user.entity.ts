@@ -2,9 +2,9 @@ import { Field, InputType, ObjectType, ID } from 'type-graphql';
 import { Entity, Column, PrimaryColumn, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, BaseEntity, OneToOne } from 'typeorm'
 import { USER_TABLE } from './user.table';
 import { USER_FIELD } from './user.field';
-import { DB_CONST } from '../../constants/db.constant';
+import { DB_CONST } from '../../../constants/db.constant';
 import { USER_RELATION } from './user.relation';
-import { MaybeLazy } from '../../types/maybe-lazy';
+import { MaybeLazy } from '../../../types/maybe-lazy';
 import { PlayerEntity } from '../player/player.entity';
 
 @ObjectType()

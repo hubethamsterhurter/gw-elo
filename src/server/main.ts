@@ -25,7 +25,7 @@ async function initConnection() {
     console.log('In development: synchronising ormconfig.json');
     // create an ormconfig.json every time it runs in dev
     const res = await new Promise((res, rej) => fs.writeFile(
-      path.resolve(__dirname, '../ormconfig.json'),
+      path.resolve(__dirname, '../../ormconfig.json'),
       JSON.stringify(connectionOptions, null, 2),
       (err) => err ? rej(err) : res()
     ));

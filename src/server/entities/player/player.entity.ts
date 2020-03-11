@@ -2,11 +2,11 @@ import { Field, InputType, ObjectType } from 'type-graphql';
 import { Entity, Column, PrimaryColumn, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, BaseEntity, JoinColumn, OneToOne } from 'typeorm'
 import { PLAYER_TABLE } from './player.table';
 import { PLAYER_FIELD } from './player.field';
-import { DB_CONST } from '../../constants/db.constant';
+import { DB_CONST } from '../../../constants/db.constant';
 import { USER_FIELD } from '../user/user.field';
 import { UserEntity } from '../user/user.entity';
 import { PLAYER_RELATION } from './player.relation';
-import { MaybeLazy } from '../../types/maybe-lazy';
+import { MaybeLazy } from '../../../types/maybe-lazy';
 
 @ObjectType()
 @Entity({ name: PLAYER_TABLE, })

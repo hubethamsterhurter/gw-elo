@@ -6,15 +6,15 @@
   "username": "db_admin",
   "password": "verySecretPassword!",
   "entities": [
-    "src/entities/**/*.entity.ts"
+    "src/server/entities/**/*.entity.ts"
   ],
   "migrations": [
-    "src/migrations/*-migration.ts"
+    "src/server/migrations/*-migration.ts"
   ],
   "synchronize": false,
   "logging": false,
   "cli": {
-    "entitiesDir": "src/entities",
-    "migrationsDir": "src/migrations"
+    "entitiesDir": "src/server/entities",
+    "migrationsDir": "src/server/migrations"
   }
 }
